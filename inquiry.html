@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private Inquiry | Catherine Cruises</title>
+  <meta name="description" content="Send a private request to Catherine Cruises: choose your vessel, voyage, suite, departure date and tailored enhancements." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/site.css?v=20260528-4" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo.png" alt="Catherine Cruises logo" />
+        <span>Catherine Cruises</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#catherine-cruise">Catherine Cruise</a>
+        <a href="index.html#catherine-horizon">Catherine Horizon</a>
+        <a href="index.html#itineraries">Itineraries</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#offers">Offers</a>
+        <a data-nav href="blog.html">Guidebook</a>
+        <a data-nav href="inquiry.html">Contact</a>
+      </nav>
+      <a class="btn btn-outline header-cta" href="index.html#quick-inquiry">Check Availability</a>
+      <button class="nav-toggle" aria-label="Open menu"><span></span></button>
+    </div>
+    <div class="mobile-menu container">
+      <a href="index.html#catherine-cruise">Catherine Cruise</a>
+      <a href="index.html#catherine-horizon">Catherine Horizon</a>
+      <a href="index.html#itineraries">Itineraries</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#offers">Offers</a>
+      <a href="blog.html">Guidebook</a>
+      <a href="inquiry.html">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero" style="background:url('assets/images/facility-panorama.jpg') center/cover no-repeat;">
+      <div class="container reveal">
+        <p class="eyebrow">Private Inquiry</p>
+        <h1>Begin Your Catherine Voyage</h1>
+        <p>Share a few details and our concierge team will shape a tailored proposal around your preferred vessel, suite, date and travel occasion.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container inquiry-shell">
+        <div class="form-panel reveal">
+          <p class="eyebrow">Concierge Request</p>
+          <h3>Private Voyage Request</h3>
+          <p class="section-copy" style="margin-bottom:.8rem;">A concise request form for guests who prefer a precise recommendation before confirming their journey.</p>
+          <div class="form-steps" aria-label="Inquiry form steps">
+            <span>1 Guest</span>
+            <span>2 Cruise</span>
+            <span>3 Date</span>
+            <span>4 Guests</span>
+            <span>5 Submit</span>
+          </div>
+
+          <form id="inquiryForm" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="full_name">Full name *</label>
+                <input id="full_name" name="full_name" type="text" required />
+                <span class="help">Primary contact name</span>
+              </div>
+
+              <div class="field">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" required />
+                <span class="help">We will respond through this email address</span>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone number *</label>
+                <input id="phone" name="phone" type="tel" required />
+                <span class="help">Include country code, for example +84</span>
+              </div>
+
+              <div class="field">
+                <label for="country">Nationality *</label>
+                <select id="country" name="country" required></select>
+                <span class="help">Helps our concierge prepare the right language and recommendation</span>
+              </div>
+
+              <div class="field">
+                <label for="cruise_choice">Preferred vessel *</label>
+                <select id="cruise_choice" name="cruise_choice" required></select>
+                <span class="help">Catherine is for overnight cruising; Horizon is for day and night experiences</span>
+              </div>
+
+              <div class="field">
+                <label for="itinerary_choice">Voyage *</label>
+                <select id="itinerary_choice" name="itinerary_choice" required></select>
+                <span class="help">Voyage options adjust to your selected vessel</span>
+              </div>
+
+              <div class="field">
+                <label for="checkin_date">Desired departure date *</label>
+                <input id="checkin_date" name="checkin_date" type="date" required />
+                <span class="help">Date must be tomorrow or later</span>
+              </div>
+
+              <div class="field">
+                <label for="duration_nights">Number of nights</label>
+                <input id="duration_nights" name="duration_nights" type="number" min="0" max="2" />
+                <span class="help">Suggested automatically from the selected voyage</span>
+              </div>
+
+              <div class="field">
+                <label for="num_adults">Adults *</label>
+                <input id="num_adults" name="num_adults" type="number" min="1" max="20" value="2" required />
+                <span class="help">Guests aged 12 and above</span>
+              </div>
+
+              <div class="field">
+                <label for="num_children">Children</label>
+                <input id="num_children" name="num_children" type="number" min="0" max="10" value="0" />
+                <span class="help">Guests aged 4 to 11</span>
+              </div>
+
+              <div class="field">
+                <label for="num_infants">Infants</label>
+                <input id="num_infants" name="num_infants" type="number" min="0" max="5" value="0" />
+                <span class="help">Guests under 4 years old</span>
+              </div>
+
+              <div id="roomWrap" class="field">
+                <label for="room_preference">Preferred suite category (Catherine)</label>
+                <select id="room_preference" name="room_preference"></select>
+                <span class="help">Villa President / Grand / Royal / Premier</span>
+              </div>
+
+              <div id="bedWrap" class="field" style="display:none;">
+                <label for="bed_config">Bed configuration (Premier)</label>
+                <select id="bed_config" name="bed_config"></select>
+                <span class="help">Double / Twin / Triple / Connecting</span>
+              </div>
+
+              <div class="field full">
+                <label>Enhancements of interest</label>
+                <div id="addonsWrap"></div>
+              </div>
+
+              <div class="field full">
+                <label for="special_requests">Special requests</label>
+                <textarea id="special_requests" name="special_requests" rows="4" maxlength="1000" placeholder="Celebration, dietary notes, private dining, transfer request, preferred pace of travel..."></textarea>
+              </div>
+
+              <div class="field full">
+                <label for="source">How did you hear about Catherine?</label>
+                <select id="source" name="source"></select>
+              </div>
+            </div>
+
+            <div style="margin-top:.85rem; display:flex; gap:.6rem; flex-wrap:wrap;">
+              <button class="btn btn-gold" type="submit">Submit Private Request</button>
+              <a class="btn btn-outline" href="cruises.html">Review Voyages</a>
+            </div>
+            <p class="form-note">After submission, Catherine concierge will respond via your preferred contact details with a curated recommendation.</p>
+            <div id="formStatus" class="status-box" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <aside class="info-panel reveal">
+          <p class="eyebrow">Concierge Desk</p>
+          <h3>Direct Contacts</h3>
+          <p style="color:var(--muted); margin-bottom:.7rem;">For urgent arrangements, private events or same-week departures, contact the Catherine team directly.</p>
+          <div id="inquiryContacts" class="contact-list"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid blueprint-footer">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/images/logo.png" alt="Catherine Cruises" />
+          <span>Catherine Cruises</span>
+        </a>
+        <p style="margin-top:.6rem;">Catherine Cruises crafts refined journeys across Ha Long Bay, from overnight luxury escapes to day and night experiences shaped by cuisine, culture and the beauty of the horizon.</p>
+      </div>
+      <div>
+        <h4>Cruises</h4>
+        <p><a href="index.html#catherine-cruise">Catherine Cruise</a></p>
+        <p><a href="index.html#catherine-horizon">Catherine Horizon</a></p>
+        <p><a href="index.html#itineraries">Itineraries</a></p>
+      </div>
+      <div>
+        <h4>Experience</h4>
+        <p><a href="index.html#experience">Dining</a></p>
+        <p><a href="index.html#experience">Wellness</a></p>
+        <p><a href="index.html#experience">Activities</a></p>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <p><a href="blog.html">Guidebook</a></p>
+        <p><a href="inquiry.html">Contact</a></p>
+        <p><a href="inquiry.html">Travel Agents</a></p>
+      </div>
+      <div>
+        <h4>General Information</h4>
+        <p>Hotline: +84 911 28 2222</p>
+        <p>Email: info@catherinecruises.vn</p>
+        <p>Website: www.catherinecruises.vn</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>Copyright <span data-year></span> © Catherine Cruises. All Rights Reserved.</p>
+      <p><a href="index.html">Back to top</a></p>
+    </div>
+  </footer>
+
+  <div class="floating-contact">
+    <a class="call" href="tel:+84911282222" aria-label="Call">☎</a>
+    <a class="wa" href="https://wa.me/84911282222" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+    <a class="ms" href="https://www.facebook.com/catherinecruises" target="_blank" rel="noopener" aria-label="Messenger">M</a>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/inquiry.js"></script>
+</body>
+</html>
